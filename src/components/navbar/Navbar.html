@@ -1,15 +1,14 @@
 <v-bottom-navigation
-        :value="activeBtn"
-        color="primary"
-        horizontal
+    :value="activeBtn"
+    color="primary"
+    horizontal
 >
-    <a href="/" class="v-btn">
-        <span>Trang chu</span>
-    </a>
-    <a href="/special-product" class="v-btn">
-        <span>San pham noi bat</span>
-    </a>
-    <v-btn href="/about">
-        <span>Thong tin</span>
-    </v-btn>
+  <v-btn
+      class="v-btn"
+      v-for="(item, index) in routes"
+      :href="rootPath + item.path"
+      :key="index"
+  >
+    <span>{{ $t(item.name) }}</span>
+  </v-btn>
 </v-bottom-navigation>

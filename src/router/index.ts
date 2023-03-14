@@ -3,15 +3,15 @@ import VueRouter, {RouteConfig} from 'vue-router'
 import Home from '@/components/home/Home.vue';
 
 Vue.use(VueRouter)
-
+const PATH = process.env.NODE_ENV === 'production' ? '/vuetest/' : '/';
 const routes: Array<RouteConfig> = [
     {
-        path: '/',
+        path: PATH,
         name: 'home',
         component: Home
     },
     {
-        path: '/about',
+        path: PATH + '/about',
         name: 'about',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
