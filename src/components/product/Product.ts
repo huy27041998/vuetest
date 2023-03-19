@@ -1,44 +1,16 @@
-import Vue from 'vue';
-import Component from 'vue-class-component';
-import Header from '@/models/Header';
+import {Vue, Component, Prop} from 'vue-property-decorator';
+import ProductEntity from "@/models/ProductEntity";
 
-@Component({
-})
+@Component({})
 
 export default class Product extends Vue {
-  props: {
-    product: {
-      require: true,
-      type: Product
-    }
-  }
+  @Prop() product: ProductEntity
 
-  headers: Header[] = [
-    new Header("ID", "id"),
-    new Header("Name", "name"),
-    new Header("Description", "description"),
-    new Header("Price", "price"),
-    new Header("InStock", "inStock"),
-    new Header("Action", "action", false),
-  ]; 
-
-  product: Product
-
-  search: string = "";
-
-  editProduct(id: number) {
-    // Implement your edit product logic here
-  }
-
-  deleteProduct(id: number) {
-    // Implement your delete product logic here
-  }
-
-  addToCart() {
-
+  addToCart(): void {
+    console.log(this.product.name, this.product.description);
   }
 
   viewDetails() {
-
+    console.log(this.product.name, this.product.price, this.product.description);
   }
 }

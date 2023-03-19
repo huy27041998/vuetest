@@ -1,7 +1,8 @@
-<v-container>
+<v-container >
   <div class="row">
-    <Product v-for="product in products" :key="product.id" :product="product">
-      <span> {{product.id}} </span>
-    </Product>
+    <v-col cols="4" v-for="product in products" :key="product.id">
+      <Product :product="product">
+      </Product>
+    </v-col>
   </div>
 </v-container>
