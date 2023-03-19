@@ -1,0 +1,7 @@
+<v-container>
+  <div class="row">
+    <Product v-for="product in products" :key="product.id" :product="product">
+      <span> {{product.id}} </span>
+    </Product>
+  </div>
+</v-container>

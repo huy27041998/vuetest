@@ -12,6 +12,7 @@
     "useDefineForClassFields": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
+    "strictPropertyInitialization": false,
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
