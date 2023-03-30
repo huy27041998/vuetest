@@ -7,10 +7,18 @@ export default {
     rootPath: PATH,
     activeBtn: 0,
     routes: [
-      {path: "", name: "common.home_page"},
-      {path: "product", name: "common.product"},
-      {path: "about", name: "common.about"}
-    ]
+      {path: "", name: "common.home_page", params: {}},
+      {path: "product", name: "common.doKho", params: {filter: 'do-kho'}},
+      {path: "product", name: "common.doTuoiSong", params: {filter: 'do-tuoi-song'}},
+      {path: "product", name: "common.ruou", params: {filter: 'ruou'}},
+      {path: "about", name: "common.about", params: {}}
+    ],
+    toUrlParam: (param) => {
+      const result = new URLSearchParams(param).toString()
+      if (result.length > 0)
+        return '?' + result
+      return ''
+    }
   })
 }
 </script>

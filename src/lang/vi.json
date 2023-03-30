@@ -2,6 +2,10 @@
   "common": {
     "home_page": "Trang chủ",
     "product": "Sản phẩm",
-    "about": "Thông tin"
+    "about": "Thông tin",
+    "doKho": "Đồ khô",
+    "doTuoiSong": "Đồ tươi sống",
+    "ruou": "Rượu",
+    "viewDetails": "Xem chi tiết"
   }
 }

@@ -16,7 +16,18 @@ export default {
       {
         src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
       },
+      {
+        src: 'caphe.png',
+      },
+      {
+        src: 'bomotnang.png',
+      },
     ],
-  })
+    getUrl(index) {
+      const url = this.items[index].src;
+      if (url.startsWith("http")) return url;
+      return require('@/assets/' + url)
+    }
+  }),
 }
 </script>

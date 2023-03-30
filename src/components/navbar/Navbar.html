@@ -6,7 +6,7 @@
   <v-btn
       class="v-btn"
       v-for="(item, index) in routes"
-      :href="rootPath + item.path"
+      :href="rootPath + item.path + toUrlParam(item.params)"
       :key="index"
   >
     <span>{{ $t(item.name) }}</span>
